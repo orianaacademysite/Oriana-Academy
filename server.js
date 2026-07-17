@@ -4,7 +4,7 @@ const path = require("path");
 const app = express();
 
 // Serve all static files (HTML, CSS, JS, images)
-app.use(express.static(path.join(__dirname)));
+app.use(express.static(path.join(__dirname), { extensions: ['html'] }));
 
 const PORT = process.env.PORT || 3000;
 
